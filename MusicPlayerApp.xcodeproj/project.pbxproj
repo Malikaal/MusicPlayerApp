@@ -16,6 +16,11 @@
 		DC4556922A413B3B004896F9 /* MusicPlayerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4556912A413B3B004896F9 /* MusicPlayerAppTests.swift */; };
 		DC45569C2A413B3B004896F9 /* MusicPlayerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC45569B2A413B3B004896F9 /* MusicPlayerAppUITests.swift */; };
 		DC45569E2A413B3B004896F9 /* MusicPlayerAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC45569D2A413B3B004896F9 /* MusicPlayerAppUITestsLaunchTests.swift */; };
+		DC4556BB2A41512C004896F9 /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4556B92A41512C004896F9 /* SongTableViewCell.swift */; };
+		DC4556BC2A41512C004896F9 /* SongTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC4556BA2A41512C004896F9 /* SongTableViewCell.xib */; };
+		DC4556BE2A415EE4004896F9 /* SongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4556BD2A415EE4004896F9 /* SongViewModel.swift */; };
+		DC4556C12A415FE2004896F9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4556C02A415FE2004896F9 /* NetworkManager.swift */; };
+		DC4556C32A4160F2004896F9 /* SongModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4556C22A4160F2004896F9 /* SongModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		DC4556972A413B3B004896F9 /* MusicPlayerAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicPlayerAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC45569B2A413B3B004896F9 /* MusicPlayerAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerAppUITests.swift; sourceTree = "<group>"; };
 		DC45569D2A413B3B004896F9 /* MusicPlayerAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DC4556B92A41512C004896F9 /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
+		DC4556BA2A41512C004896F9 /* SongTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongTableViewCell.xib; sourceTree = "<group>"; };
+		DC4556BD2A415EE4004896F9 /* SongViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewModel.swift; sourceTree = "<group>"; };
+		DC4556C02A415FE2004896F9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		DC4556C22A4160F2004896F9 /* SongModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +109,9 @@
 		DC4556792A413B3A004896F9 /* MusicPlayerApp */ = {
 			isa = PBXGroup;
 			children = (
-				DC45567A2A413B3A004896F9 /* AppDelegate.swift */,
-				DC45567C2A413B3A004896F9 /* SceneDelegate.swift */,
-				DC45567E2A413B3A004896F9 /* ViewController.swift */,
-				DC4556802A413B3A004896F9 /* Main.storyboard */,
-				DC4556832A413B3B004896F9 /* Assets.xcassets */,
-				DC4556852A413B3B004896F9 /* LaunchScreen.storyboard */,
+				DC4556AC2A413C5B004896F9 /* Sources */,
+				DC4556AB2A413BC9004896F9 /* Resources */,
+				DC4556AA2A413B7B004896F9 /* AppDelegate */,
 				DC4556882A413B3B004896F9 /* Info.plist */,
 			);
 			path = MusicPlayerApp;
@@ -125,6 +132,78 @@
 				DC45569D2A413B3B004896F9 /* MusicPlayerAppUITestsLaunchTests.swift */,
 			);
 			path = MusicPlayerAppUITests;
+			sourceTree = "<group>";
+		};
+		DC4556AA2A413B7B004896F9 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				DC45567A2A413B3A004896F9 /* AppDelegate.swift */,
+				DC45567C2A413B3A004896F9 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		DC4556AB2A413BC9004896F9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DC4556832A413B3B004896F9 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DC4556AC2A413C5B004896F9 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DC4556BF2A415FB0004896F9 /* Managers */,
+				DC4556AF2A413D08004896F9 /* Models */,
+				DC4556AE2A413CFE004896F9 /* ViewModels */,
+				DC4556AD2A413CD6004896F9 /* Views */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		DC4556AD2A413CD6004896F9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DC4556B42A414609004896F9 /* MusicList */,
+				DC45567E2A413B3A004896F9 /* ViewController.swift */,
+				DC4556802A413B3A004896F9 /* Main.storyboard */,
+				DC4556852A413B3B004896F9 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DC4556AE2A413CFE004896F9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DC4556BD2A415EE4004896F9 /* SongViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DC4556AF2A413D08004896F9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DC4556C22A4160F2004896F9 /* SongModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DC4556B42A414609004896F9 /* MusicList */ = {
+			isa = PBXGroup;
+			children = (
+				DC4556B92A41512C004896F9 /* SongTableViewCell.swift */,
+				DC4556BA2A41512C004896F9 /* SongTableViewCell.xib */,
+			);
+			path = MusicList;
+			sourceTree = "<group>";
+		};
+		DC4556BF2A415FB0004896F9 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DC4556C02A415FE2004896F9 /* NetworkManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +313,7 @@
 				DC4556872A413B3B004896F9 /* LaunchScreen.storyboard in Resources */,
 				DC4556842A413B3B004896F9 /* Assets.xcassets in Resources */,
 				DC4556822A413B3A004896F9 /* Main.storyboard in Resources */,
+				DC4556BC2A41512C004896F9 /* SongTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +338,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC4556C12A415FE2004896F9 /* NetworkManager.swift in Sources */,
 				DC45567F2A413B3A004896F9 /* ViewController.swift in Sources */,
 				DC45567B2A413B3A004896F9 /* AppDelegate.swift in Sources */,
+				DC4556C32A4160F2004896F9 /* SongModel.swift in Sources */,
 				DC45567D2A413B3A004896F9 /* SceneDelegate.swift in Sources */,
+				DC4556BB2A41512C004896F9 /* SongTableViewCell.swift in Sources */,
+				DC4556BE2A415EE4004896F9 /* SongViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +529,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -473,6 +558,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
