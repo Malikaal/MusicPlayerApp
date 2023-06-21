@@ -78,7 +78,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         
         isPlay.toggle()
-        print(isPlay)
         if let selectedIndexPath = selectedIndexPath {
             tableView.reloadRows(at: [selectedIndexPath], with: .none)
         }
